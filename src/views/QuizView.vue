@@ -13,12 +13,6 @@ const currentQuestionIndex =ref(0);
 const numberOfCorrectAnswers= ref(0)
 const showResults = ref(false)
 
-// const questionStatus = ref(`${currentQuestionIndex.value}/${quiz.questions.length}`);
-
-// watch(() => currentQuestionIndex.value, () => {
-//     questionStatus.value = `${currentQuestionIndex.value}/${quiz.questions.length}`
-// })
-
 const questionStatus = computed(() => `${currentQuestionIndex.value}/${quiz.questions.length}`);
 const barPercentage = computed(() => `${currentQuestionIndex.value/quiz.questions.length * 100}%`)
 
